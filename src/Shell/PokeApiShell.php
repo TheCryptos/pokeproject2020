@@ -34,6 +34,18 @@ class PokeApiShell extends Shell
         $this->_loadGeneration(1, 151);
         $this->verbose('Loading the 2nd generation !');
         $this->_loadGeneration(152, 251);
+        $this->verbose('Loading the 3e generation !');
+        $this->_loadGeneration(252, 386);
+        $this->verbose('Loading the 4e generation !');
+        $this->_loadGeneration(387, 493);
+        $this->verbose('Loading the 5e generation !');
+        $this->_loadGeneration(494, 649);
+        $this->verbose('Loading the 6e generation !');
+        $this->_loadGeneration(650, 721);
+        $this->verbose('Loading the 7e generation !');
+        $this->_loadGeneration(722, 809);
+        $this->verbose('Loading the 8e generation !');
+        $this->_loadGeneration(810, 898);
     }
 
     /**
@@ -48,6 +60,7 @@ class PokeApiShell extends Shell
         for ($pokedexNumber = $from; $pokedexNumber <= $to; $pokedexNumber++) {
             $pokeApiData = $this->_getPokemonById($pokedexNumber);
             if (!$this->Pokemons->exists(['pokedex_number' => $pokedexNumber])) {
+                $this->verbose("The pokemon {$pokedexNumber} is loading in database");
                 $this->_createPokemon($pokeApiData);
             } else {
                 $this->verbose("The pokemon {$pokedexNumber} already exist in database");
