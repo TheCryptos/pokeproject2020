@@ -13,42 +13,47 @@
         </div>
     </aside>
     <div class="column-responsive column-80">
+      <div class="pokemons view content">
+        <h3><?= h($pokemon->name) ?></h3>
+        <div class="slider">
+          <img src="<?= h($pokemon->default_front_sprite_url) ?>" alt="default_front_sprite">
+          <img src="<?= h($pokemon->default_back_sprite_url) ?>" alt="default_back_sprite_url">
+          <img src="<?= h($pokemon->front_shiny_sprite_url) ?>" alt="front_shiny_sprite_url">
+        </div>
+
+        <h3><?= $pokemon->first_type ?></h3>
+        <?php if ($pokemon->has_second_type) : ?>
+        <h3><?= $pokemon->second_type ?></h3>
+        <?php endif ?>
+        <table>
+          <tr>
+            <th> <h3>HP</h3> </th>
+            <th><h1><?= h($pokemon->Hp) ?></h1></th>
+          </tr>
+          <tr>
+            <th> <h3>Defense</h3> </th>
+            <th><h1><?= h($pokemon->Defense) ?></h1></th>
+          </tr>
+          <tr>
+            <th> <h3>Attack</h3> </th>
+            <th><h1><?= h($pokemon->Attack) ?></h1></th>
+          </tr>
+          <tr>
+            <th> <h3>Special Attack</h3> </th>
+            <th><h1><?= h($pokemon->SpeAttack) ?></h1></th>
+          </tr>
+          <tr>
+            <th> <h3>Special Defense</h3> </th>
+            <th><h1><?= h($pokemon->SpeDefense) ?></h1></th>
+          </tr>
+          <tr>
+            <th> <h3>Speed</h3> </th>
+            <th><h1><?= h($pokemon->Speed) ?></h1></th>
+          </tr>
+        </table>
+      </div>
+      <!--
         <div class="pokemons view content">
-            <h3><?= h($pokemon->name) ?></h3>
-            <table>
-                <tr>
-                    <th><?= __('Name') ?></th>
-                    <td><?= h($pokemon->name) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Default Front Sprite Url') ?></th>
-                    <td><?= h($pokemon->default_front_sprite_url) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($pokemon->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Height') ?></th>
-                    <td><?= $this->Number->format($pokemon->height) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Weight') ?></th>
-                    <td><?= $this->Number->format($pokemon->weight) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Pokedex Number') ?></th>
-                    <td><?= $this->Number->format($pokemon->pokedex_number) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Created') ?></th>
-                    <td><?= h($pokemon->created) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Modified') ?></th>
-                    <td><?= h($pokemon->modified) ?></td>
-                </tr>
-            </table>
             <div class="related">
                 <h4><?= __('Related Pokemon Stats') ?></h4>
                 <?php if (!empty($pokemon->pokemon_stats)) : ?>
@@ -109,6 +114,6 @@
                 </div>
                 <?php endif; ?>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
