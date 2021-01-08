@@ -87,4 +87,75 @@ class Pokemon extends Entity
 
         return false;
     }
+
+    protected function _getHp()
+    {
+        if (isset($this->pokemon_stats) && !empty($this->pokemon_stats)) {
+            return collection($this->pokemon_stats)
+                ->extract('value')
+                ->first();
+        }
+
+        return 'normal';
+    }
+
+    protected function _getAttack()
+    {
+        if (isset($this->pokemon_stats) && !empty($this->pokemon_stats)) {
+            return collection($this->pokemon_stats)
+                ->extract('value')
+                ->skip(1)
+                ->first();
+        }
+
+        return 'normal';
+    }
+
+    protected function _getDefense()
+    {
+        if (isset($this->pokemon_stats) && !empty($this->pokemon_stats)) {
+            return collection($this->pokemon_stats)
+                ->extract('value')
+                ->skip(2)
+                ->first();
+        }
+
+        return 'normal';
+    }
+
+    protected function _getSpeAttack()
+    {
+        if (isset($this->pokemon_stats) && !empty($this->pokemon_stats)) {
+            return collection($this->pokemon_stats)
+                ->extract('value')
+                ->skip(3)
+                ->first();
+        }
+
+        return 'normal';
+    }
+
+    protected function _getSpeDefense()
+    {
+        if (isset($this->pokemon_stats) && !empty($this->pokemon_stats)) {
+            return collection($this->pokemon_stats)
+                ->extract('value')
+                ->skip(4)
+                ->first();
+        }
+
+        return 'normal';
+    }
+
+    protected function _getSpeed()
+    {
+        if (isset($this->pokemon_stats) && !empty($this->pokemon_stats)) {
+            return collection($this->pokemon_stats)
+                ->extract('value')
+                ->skip(5)
+                ->first();
+        }
+
+        return 'normal';
+    }
 }
