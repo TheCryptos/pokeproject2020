@@ -3,7 +3,7 @@
     <div class="card__image-container poke-sprite-<?= $pokemon->pokedex_number ?>" id="main-poke-sprites">
         <?= $this->Html->image($pokemon->main_sprite); ?>
     </div>
-    
+
     <figcaption class="card__caption">
         <h1 class="card__name"><?= $pokemon->name ?></h1>
 
@@ -20,11 +20,11 @@
         <table class="card__stats">
             <tbody>
                 <tr>
-                    <th>Height</th>
+                    <th>Poids</th>
                     <td><?= $pokemon->height ?></td>
                 </tr>
                 <tr>
-                    <th>Weight</th>
+                    <th>Taille</th>
                     <td><?= $pokemon->weight ?></td>
                 </tr>
             </tbody>
@@ -32,7 +32,7 @@
 
         <div>
             <?= $this->Html->link('<i class="fas fa-eye"></i>', ['action' => 'view', $pokemon->id], ['escape' => false, 'class' => 'btn btn-sm btn-info', 'title' => __('Voir')]) ?>
-            <?= $this->Form->postLink('<i class="fas fa-trash"></i>', ['action' => 'delete', $pokemon->id], ['confirm' => __('Are you sure you want to delete # {0}?', $pokemon->name), 'escape' => false, 'class' => 'btn btn-sm', 'title' => __('Supprimer')]) ?>
+            <?= $this->Form->postLink('<i class="fas fa-trash"></i>', ['action' => 'delete', $pokemon->id], ['confirm' => __('Etes-vous sûr que vous voulez supprimer # {0} ?', $pokemon->name), 'escape' => false, 'class' => 'btn btn-sm', 'title' => __('Supprimer')]) ?>
         </div>
     </figcaption>
 </figure>
