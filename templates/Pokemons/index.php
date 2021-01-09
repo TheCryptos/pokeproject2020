@@ -17,12 +17,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('premier')) ?>
+            <?= $this->Paginator->prev('< ' . __('précédent')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('suivant') . ' >') ?>
+            <?= $this->Paginator->last(__('dernier') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Page {{page}} sur {{pages}}, montrant {{current}} enregistrement(s) sur un total de {{count}}')) ?></p>
     </div>
 </div>
