@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Pokemon Project ';
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +72,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <?= $this->element('Footer/snorlax') ?>
         </div>
         <div class="col-auto text-center">
-                A sleeping Pokemon block the way !
+          Un Pokémon endormi bloque le chemin!
         </div>
     </div>
     </footer>
