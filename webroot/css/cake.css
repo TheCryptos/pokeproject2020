@@ -110,6 +110,9 @@ h5{
 th.spec{
   border: thick double;
 }
+.bulle{
+  border-bottom: 1px gray solid;
+}
 .high_label{
   font-size: 5vw;
   font-weight: bold;
