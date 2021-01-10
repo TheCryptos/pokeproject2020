@@ -51,17 +51,97 @@ th a,
     -webkit-overflow-scrolling: touch;
 }
 
+/* types in Visual state */
+
+div.types{
+  display: inline-block;
+  width: 200px; // or whatever
+  text-align: center;
+}
+/* css bootstrap changes*/
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #000;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 60px;
+  color: #000;
+}
+
 /* Main */
 body {
-    background: #f5f7fa;
+    background: #212529;
+}
+table.spec{
+  margin: 2em auto;
+  width: 50%;
+}
+h2,h3{
+  margin: 0;
+  text-align: center
+}
+h1.label{
+text-align: center;
+}
+
+h5{
+  color: #000;
+}
+.types{
+  margin: 0 5em 0 5em;
+  border: solid 1px #000;
+}
+th.spec{
+  border: thick double;
+}
+.high_label{
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 8px solid #000;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+img.carousel{
+  width: 15%;
+  border-radius: 40%;
+  background-color: black;
 }
 .content {
+    margin: 1rem;
     padding: 2rem;
     background: #ffffff;
     border-radius: 0.4rem;
     /* Thanks Stripe */
-    box-shadow: 0 7px 14px 0 rgba(60, 66, 87, 0.1),
-        0 3px 6px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: inset 0 0 6em black, 0 0 2em white;
+}
+a.warning:hover{
+ color: red;
+ text-decoration: none;
+}
+a.redirect:hover{
+
+ color: green;
+ text-decoration: none;
+}
+a{
+  transition: .4s;
 }
 .actions a {
     font-weight: bold;
