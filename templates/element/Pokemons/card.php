@@ -27,6 +27,10 @@
                     <th>Taille</th>
                     <td><?= $pokemon->weight ?></td>
                 </tr>
+                <tr>
+                    <th>Vitesse</th>
+                    <td><?= $pokemon->speed ?></td>
+                </tr>
             </tbody>
         </table>
 
