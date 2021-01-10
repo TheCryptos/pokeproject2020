@@ -41,10 +41,10 @@ class PokemonsController extends AppController
       $query2 = $this->Pokemons->find()
           ->contain(['PokemonStats.Stats', 'PokemonTypes.Types'])
           ->from('pokemons AS Pokemons, pokemon_types, types')
-          ->where(['types.name'=> $type])
+          ->where(['types.name' => $type, '(pokemon_id > 0 AND pokemon_id < 152 OR pokemon_id > 251 AND pokemon_id < 387 OR pokemon_id > 721 AND pokemon_id < 810)'])
           ->where(['types.id = pokemon_types.type_id'])
           ->where(['pokemon_types.pokemon_id = Pokemons.id']);
-          
+
       $query3 = $this->Pokemons->find()
           ->contain(['PokemonStats.Stats', 'PokemonTypes.Types'])
           ->from('pokemons AS Pokemons, pokemon_stats')
