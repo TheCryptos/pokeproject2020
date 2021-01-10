@@ -33,7 +33,7 @@ class PokemonsController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
-    public function tableauDeBord($type)
+    public function tableauDeBord($type = 'fairy')
     {
       $query1 = $this->Pokemons->find();
       $query1->where(['id > 386 AND id < 494'])->select(['PoidsMoyen' => $query1->func()->avg('weight')]);
@@ -47,9 +47,11 @@ class PokemonsController extends AppController
 
       $query2 = $this->Pokemons->PokemonTypes->find()
         ->contain(['Types'])
-        ->where(['Types.name' => "$type", '(pokemon_id > 0 AND pokemon_id < 152 OR pokemon_id > 251 AND pokemon_id < 387 OR pokemon_id > 721 AND pokemon_id < 810)']);
+        ->where(['Types.name' => $type, '(pokemon_id > 0 AND pokemon_id < 152 OR pokemon_id > 251 AND pokemon_id < 387 OR pokemon_id > 721 AND pokemon_id < 810)']);
 
       $query2->select(['NombresPokemonsFée' => $query2->func()->count('name')]); //On compte le nombre de pokemons de type fée
+
+
 
       $query3 = $this->Pokemons->PokemonStats->find()
         ->contain(['Stats'])
@@ -58,6 +60,9 @@ class PokemonsController extends AppController
 
       $query3->limit(10)->count();
       $query3->select(['pokemon_id', 'value']);
+
+
+
 
       $this->set(compact('query1', 'query2', 'query3'));
     }
