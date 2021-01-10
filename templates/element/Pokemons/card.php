@@ -20,16 +20,16 @@
         <table class="card__stats">
             <tbody>
                 <tr>
-                    <th>Poids</th>
-                    <td><?= $pokemon->height ?></td>
+                    <th class="bulle">Poids</th>
+                    <td class="bulle"><?= $pokemon->height ?></td>
                 </tr>
                 <tr>
-                    <th>Taille</th>
-                    <td><?= $pokemon->weight ?></td>
+                    <th class="bulle">Taille</th>
+                    <td class="bulle"><?= $pokemon->weight ?></td>
                 </tr>
                 <tr>
-                    <th>Vitesse</th>
-                    <td><?= $pokemon->speed ?></td>
+                    <th class="bulle">Vitesse</th>
+                    <td class="bulle"><?= $pokemon->speed ?></td>
                 </tr>
             </tbody>
         </table>
