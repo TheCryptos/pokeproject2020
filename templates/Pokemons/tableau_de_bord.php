@@ -4,7 +4,7 @@
     <p>Résultat = <?= h($query1->first()->PoidsMoyen) ?></p>
 
       <h3>Nombre de pokemons de type fée entre les générations 1,3 et 7</h3>
-      <p>Résultat = <?= h($query2->count()) ?> pokémons</p>
+      <p>Résultat = <?= h($query2->count()) ?> pokémon</p>
       <h4>Voici leurs cartes :</h4>
       <?php foreach ($query2 as $pokemon) : ?>
         <?= $this->element('Pokemons/card', ['pokemon' => $pokemon]); ?>
