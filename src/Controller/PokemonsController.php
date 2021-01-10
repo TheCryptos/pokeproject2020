@@ -90,9 +90,9 @@ class PokemonsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $pokemon = $this->Pokemons->get($id);
         if ($this->Pokemons->delete($pokemon)) {
-            $this->Flash->success(__('The pokemon has been deleted.'));
+            $this->Flash->success(__('Le pokemon a été supprimé.'));
         } else {
-            $this->Flash->error(__('The pokemon could not be deleted. Please, try again.'));
+            $this->Flash->error(__("Le pokémon n'a pas pu être supprimé. Veuillez réessayer.."));
         }
 
         return $this->redirect(['action' => 'index']);
