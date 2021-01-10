@@ -7878,49 +7878,33 @@ div.snorlax {
     background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%); }
     .card--psychic .card__type,
     .card .psychic .card__type {
-      background: #ff2cc3; }
+      background-color: #ff2cc3; }
   .card--dark,
   .card .dark {
     background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%); }
     .card--dark .card__type,
     .card .dark .card__type {
-      background: #5c0249; }
+      background-color: #5c0249; }
   .card--grass,
   .card .grass {
     background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%); }
     .card--grass .card__type,
     .card .grass .card__type {
-    background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%); }
+    background-color: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%); }
   .card--ice,
   .card .ice {
     background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%); }
     .card--ice .card__type,
     .card .ice .card__type {
-      background: #6fb8eb; }
+      background-color: #6fb8eb; }
   .card--fairy,
   .card .fairy {
     background: linear-gradient(45deg, #ffe6f0 0%, #ffc5e0 34%, #ffa6b9 71%, #ff8a95 100%); }
     .card--fairy .card__type,
     .card .fairy .card__type {
-      background: #ff8a95; }
-  .card:nth-child(1) {
+      background-color: #ff8a95; }
+  .card:nth-child(n) {
     transform: translateY(0px) rotate(2deg); }
-  .card:nth-child(2) {
-    transform: translateY(0px) rotate(-2deg); }
-  .card:nth-child(3) {
-    transform: translateY(0px) rotate(4deg); }
-  .card:nth-child(4) {
-    transform: translateY(0px) rotate(-5deg); }
-  .card:nth-child(5) {
-    transform: translateY(0px) rotate(3deg); }
-  .card:nth-child(6) {
-    transform: translateY(0px) rotate(-1deg); }
-  .card:nth-child(7) {
-    transform: translateY(0px) rotate(2deg); }
-  .card:nth-child(8) {
-    transform: translateY(0px) rotate(0deg); }
-  .card:nth-child(9) {
-    transform: translateY(0px) rotate(1deg); }
   .card:hover {
     z-index: 5;
     box-shadow: inset 0 0 2em gold, 0 0 12em gold;
