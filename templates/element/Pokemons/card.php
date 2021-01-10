@@ -5,7 +5,7 @@
     </div>
 
     <figcaption class="card__caption">
-        <h1 class="card__name"><?= $pokemon->id ?># <?= $pokemon->name ?> </h1>
+        <h1 class="card__name"><?= $pokemon->pokedex_number ?># <?= $pokemon->name ?> </h1>
 
         <h3 class="card__type <?= $pokemon->first_type ?>">
             <?= $pokemon->first_type ?>
